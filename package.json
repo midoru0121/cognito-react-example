@@ -7,8 +7,12 @@
     "@types/node": "12.12.3",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.3",
+    "amazon-cognito-identity-js": "^3.2.0",
+    "aws-sdk": "^2.560.0",
+    "axios": "^0.19.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "typescript": "3.6.4"
   },
@@ -16,7 +20,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cognito:create": "ts-node -O '{\"module\": \"commonjs\"}' bin/aws/cognito/create.ts",
+    "cognito:auth": "ts-node -O '{\"module\": \"commonjs\"}' bin/aws/cognito/auth.ts",
+    "cognito:clean": "ts-node  -O '{\"module\": \"commonjs\"}' bin/aws/cognito/clean.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/react-router-dom": "^5.1.1",
+    "ts-node": "^8.4.1"
   }
 }

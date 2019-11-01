@@ -56,6 +56,9 @@ yarn start
 
 1: Access /signup path
 
+![React_App](https://user-images.githubusercontent.com/3450879/68060291-0df05080-fd43-11e9-8c68-0329d21a2962.jpg)
+
+
 2: enter your email and password. Password must contain symbol character, lowercase, uppercase and numbers. Minimum length of the password is 8.
 
 3: After clicking the "signup" button, an email which contains a confirmation code will be sent to your email box. Then check confirmation code.

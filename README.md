@@ -67,6 +67,9 @@ yarn start
 
 5: Navigate to "/siginin" path. And sigin in with the above email and password. Now you can access "/" path.
 
+![React_App](https://user-images.githubusercontent.com/3450879/68060411-a1c21c80-fd43-11e9-9dda-b4e67e6eb812.jpg)
+
+
 ## Deploy Lambda and API Gateway
 
 Clone the following repogitory and deploy to AWS Lambda and API Gateway.

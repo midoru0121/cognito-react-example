@@ -52,7 +52,7 @@ Then, start the application.
 yarn start
 ```
 
-## Sign Up
+### Sign Up
 
 1: Access /signup path
 
@@ -70,7 +70,7 @@ yarn start
 ![React_App](https://user-images.githubusercontent.com/3450879/68060411-a1c21c80-fd43-11e9-9dda-b4e67e6eb812.jpg)
 
 
-## Deploy Lambda and API Gateway
+### Deploy Lambda and API Gateway
 
 Clone the following repogitory and deploy to AWS Lambda and API Gateway.
 
@@ -91,6 +91,12 @@ And restart the applicartion.
 ```
 yarn start
 ```
+
+### Access authorized API Gateway + Lambda
+
+
+Access "/" path and the React application will send an request to authrized API Gateway with headers which includes Amazon Cognito JWT Token. Then the response data from Lambda will be displayed in the screen.
+
 
 ## Delete User Pool and Id Pool
 

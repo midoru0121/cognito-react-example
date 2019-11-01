@@ -52,9 +52,44 @@ Then, start the application.
 yarn start
 ```
 
+## Sign Up
+
+1: Access /signup path
+
+2: enter your email and password. Password must contain symbol character, lowercase, uppercase and numbers. Minimum length of the password is 8.
+
+3: After clicking the "signup" button, an email which contains a confirmation code will be sent to your email box. Then check confirmation code.
+
+4: Enter confirmation code and click the "confirmation" button, and signup will be completed.
+
+5: Navigate to "/siginin" path. And sigin in with the above email and password. Now you can access "/" path.
+
+## Deploy Lambda and API Gateway
+
+Clone the following repogitory and deploy to AWS Lambda and API Gateway.
+
+https://github.com/AtaruOhto/cognito-lambda-api-gateway-example
+
+
+Then set the Lambda endpoint to `.env` file.
+
+
+```
+
+
+REACT_APP_LAMBDA_ENDPOINT=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+And restart the applicartion.
+
+```
+yarn start
+```
 
 ## Delete User Pool and Id Pool
 
 ```
 yarn cognito:clean
 ```
+
+

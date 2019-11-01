@@ -15,14 +15,16 @@ export const Secret = () => {
 
   const endpoint = process.env.REACT_APP_LAMBDA_ENDPOINT || "";
 
-  cognitoUser!.getSession((err: any, session: CognitoUserSession) => {
-    if (err) {
-      return alert(err.message);
-    }
-    if (jwtToken === "") {
-      setJwtToken(session.getIdToken().getJwtToken());
-    }
-  });
+  if (cognitoUser) {
+    cognitoUser.getSession((err: any, session: CognitoUserSession) => {
+      if (err) {
+        return alert(err.message);
+      }
+      if (jwtToken === "") {
+        setJwtToken(session.getIdToken().getJwtToken());
+      }
+    });
+  }
 
   useEffect(() => {
     (async () => {

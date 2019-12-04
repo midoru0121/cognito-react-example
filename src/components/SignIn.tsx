@@ -35,6 +35,7 @@ export const SignIn = () => {
           var accessToken = result.getAccessToken().getJwtToken();
           console.log(accessToken);
           console.log(result);
+          alert("Sign in success!");
         },
 
         onFailure: err => {

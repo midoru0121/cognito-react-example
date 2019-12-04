@@ -32,8 +32,6 @@ export const SignUp = () => {
     userPool.getCurrentUser()
   );
 
-  console.log(userPool.getCurrentUser());
-
   const onSignUpSubmit = useCallback(
     e => {
       e.preventDefault();
@@ -51,7 +49,6 @@ export const SignUp = () => {
         [],
         (err: any, result?: ISignUpResult) => {
           if (err) {
-            alert(err.message);
             console.error(err);
             return;
           }
@@ -83,15 +80,16 @@ export const SignUp = () => {
     [cognitoUser, confirmation]
   );
 
-  if (cognitoUser != null) {
-    cognitoUser.getSession((err: any, session: any) => {
-      if (err) {
-        alert(err);
-        return;
-      }
-      console.log("session validity: " + session.isValid());
-    });
-  }
+  // if (cognitoUser != null) {
+  //   cognitoUser.getSession((err: any, session: any) => {
+  //     if (err) {
+  //       console.log(err);
+  //       alert(err);
+  //       return;
+  //     }
+  //     console.log("session validity: " + session.isValid());
+  //   });
+  // }
 
   return (
     <>
